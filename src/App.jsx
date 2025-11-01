@@ -7,10 +7,10 @@ import {
 } from 'react-router-dom'
 
 // Pages
-import FlagAll, {FlagsLoader} from './pages/FlagAll'
+import FlagAll, {FlagsLoader} from './pages/FlagAll/FlagAll'
 import FlagDetail, { FlagsDetailLoader} from './pages/FlagDetail'
 import NotFound from './pages/NotFound'
-import FlagError from './pages/profiles/ProfilesError'
+import FlagError from './pages/FlagAll/FlagError'
 
 // Layouts
 import RootLayout from './layouts/RootLayout'
