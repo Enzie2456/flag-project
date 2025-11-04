@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom'
 
 // Pages
-import FlagAll, {FlagsLoader} from './pages/FlagAll/FlagAll'
-import FlagDetail, { FlagsDetailLoader} from './pages/FlagDetail'
+import FlagAll from './pages/FlagAll/FlagAll'
+import FlagDetail from './pages/FlagDetail'
 import NotFound from './pages/NotFound'
 import FlagError from './pages/FlagAll/FlagError'
 
@@ -17,22 +17,31 @@ import RootLayout from './layouts/RootLayout'
 import SearchFlagLayout from './layouts/SearchFlagLayout'
 import RegionFilterLayout from './layouts/RegionFilterLayout'
 
+// Components
+import DarkModeToggle from "./components/DarkModeToggle";
+
 const routesFromElements = createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-        <Route index element={<FlagAll />} errorElement={<FlagError />} loader={FlagsLoader} >
-        <Route
-                path=":id"
-                element={<FlagDetail />}
-                loader={ FlagsDetailLoader}
-            />
-        </Route>
-            <Route path="searchflag" element={<SearchFlagLayout />}>
+        
+        <Route 
+            index 
+            element={<FlagAll />} 
+            errorElement={<FlagError />} 
+        />
+        
+        <Route 
+             
+            element={<FlagDetail />} 
+        />
+
+        <Route path="searchflag" element={<SearchFlagLayout />}>
             <Route path="regionfilter" element={<RegionFilterLayout />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
 
+        <Route path="*" element={<NotFound />} />
     </Route>
 )
+
 
 const router = createBrowserRouter(routesFromElements)
 

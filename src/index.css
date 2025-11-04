@@ -4,4 +4,58 @@
   --primary: #2B3844 ;
   --secondary: #202C36;
   --white: #F2F2F2;
+  --font-main: 'Open Sans', sans-serif;
+
 }
+
+* {
+  font-family: var(--font-main);
+  box-sizing: border-box;
+}
+
+Body {
+  background-color: var(--secondary);
+      margin: 0px;
+      padding: 0px;
+}
+
+.navbar {
+  background-color: var(--primary);
+  width: 100%; 
+  box-shadow: 0 0 20px -12px;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.nav-link-1 {
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  font-weight: 600;
+}
+
+.nav-link-2 {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+}
+
+
+
+.techover-logo {
+  width: 150px;
+  object-fit: contain; 
+}
+
+.navbar-light-darkmode {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
