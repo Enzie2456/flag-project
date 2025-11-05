@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+/*
 :root {
   --primary: #2B3844 ;
   --secondary: #202C36;
   --white: #F2F2F2;
   --font-main: 'Open Sans', sans-serif;
 
+}
+*/
+
+:root {
+  /* Mörkt tema (default) */
+  --bg-color: #202c36;
+  --text-color: #f2f2f2;
+  --nav-bg: #2b3844;
+   --font-main: 'Open Sans', sans-serif;
+}
+
+.light-theme {
+  /* Ljust tema */
+  --bg-color: #f2f2f2;
+  --text-color: #202c36;
+  --nav-bg: #ffffff;
 }
 
 * {
@@ -14,13 +31,15 @@
 }
 
 Body {
-  background-color: var(--secondary);
+/*background-color: var(--secondary); */
+      background-color: var(--bg-color);
       margin: 0px;
       padding: 0px;
 }
 
 .navbar {
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: var(--nav-bg);
   width: 100%; 
   box-shadow: 0 0 20px -12px;
 }
@@ -35,17 +54,16 @@ Body {
 .nav-link-1 {
   text-decoration: none;
   font-size: 17px;
-  color: white;
+  color: var(--text-color);
   font-weight: 600;
 }
 
 .nav-link-2 {
   text-decoration: none;
   font-size: 14px;
-  color: white;
+  color: var(--text-color);
   font-weight: 500;
 }
-
 
 
 .techover-logo {
@@ -58,4 +76,19 @@ Body {
   align-items: center;
   gap: 12px;
 }
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  padding: 10px 16px;
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 

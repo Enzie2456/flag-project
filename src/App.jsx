@@ -17,8 +17,6 @@ import RootLayout from './layouts/RootLayout'
 import SearchFlagLayout from './layouts/SearchFlagLayout'
 import RegionFilterLayout from './layouts/RegionFilterLayout'
 
-// Components
-import DarkModeToggle from "./components/DarkModeToggle";
 
 const routesFromElements = createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>

@@ -1,12 +1,21 @@
 import { Outlet, NavLink } from 'react-router-dom'
-import logo from '../assets/techover-logo.png'
+import { useState, useEffect } from "react";
+import logoDark from '../assets/techover-logo.png'
+import logoLight from "../assets/techover-logo-dark.png";
 import moon from '../assets/moon.svg'
+import DarkModeToggles from '../components/DarkModeToggles'
 
 // Components
 
 
 
 const RootLayout = () => {
+    const [isLight, setIsLight] = useState(false);
+
+    useEffect(() => {
+    document.body.classList.toggle("light-theme", isLight);
+  }, [isLight]);
+
     return (
         <div className="root-layout">
             <header>
@@ -15,13 +24,11 @@ const RootLayout = () => {
                         <NavLink className="nav-link-1" to="/">
                             The  Flag  App
                         </NavLink>
-                        <img src={logo} alt="techover-logo" className="techover-logo" />
+                            <img src={isLight ? logoLight : logoDark} 
+                            alt="techover-logo" 
+                            className="techover-logo" />
                         <div className="navbar-light-darkmode">
-                           
-                            <img src={moon} alt="moon-logo" className="moon-logo" /> 
-                            <NavLink className="nav-link-2" to="light-mode">
-                                Dark Mode
-                            </NavLink>
+                            <DarkModeToggles isLight={isLight} setIsLight={setIsLight}  />
                         </div>
                     </div> 
                 </nav>
