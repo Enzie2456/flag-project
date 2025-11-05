@@ -91,4 +91,44 @@ Body {
   font-weight: 500;
 }
 
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem auto;
+  max-width: 400px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  outline: none;
+  transition: 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--text-color);
+  box-shadow: 0 0 5px var(--text-color);
+}
+
+.search-button {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-button:hover {
+  opacity: 0.8;
+}
+
+
 
