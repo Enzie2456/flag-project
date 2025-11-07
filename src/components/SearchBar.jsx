@@ -12,7 +12,7 @@ const SearchBar = ({ onSearch }) => {
   return (
     <input
       type="text"
-      placeholder="Sök efter ett land..."
+      placeholder="Search for a country..."
       value={query}
       onChange={handleChange}
       className="search-input"
