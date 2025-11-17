@@ -48,7 +48,7 @@ p {
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  padding: 15px 40px;
+  padding: 20px 45px;
 }
 
 .nav-link-1 {
@@ -128,7 +128,8 @@ p {
 .navbar-content {
   width: 100%;
   margin: 0 auto;
-  padding: 0px; 
+  padding: 10px 45px; 
+  max-width: 1200px;
 }
 
 /* Behåll din tidigare flex/grid layout */
@@ -137,9 +138,8 @@ p {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   gap: 10px;
-  padding: 0 0px; /* jämna sidor mot navbar */
 }
 
 
@@ -152,12 +152,9 @@ p {
   width: 100%;
   max-width: 1200px;         
   margin: 0 auto;            
-  padding: 40px 20px; 
+  
 }
 
-.navbar-content {
-  padding: 20px 40px;
-}
 
 .region-filter-container {
   position: relative;
@@ -288,6 +285,11 @@ body.dark-mode .flag-card {
 
 
 @media (max-width: 1150px) {
+
+  .navbar-content {
+    padding: 20px 45px
+
+  }
   .filter-bar {
     flex-direction: column;
     align-items: start;
