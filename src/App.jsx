@@ -14,8 +14,7 @@ import FlagError from "./pages/FlagAll/FlagError";
 
 // Layouts
 import RootLayout from "./layouts/RootLayout";
-import SearchFlagLayout from "./layouts/SearchFlagLayout";
-import RegionFilterLayout from "./layouts/RegionFilterLayout";
+
 
 const routesFromElements = createRoutesFromElements(
   <Route path="/" element={<RootLayout />}>
