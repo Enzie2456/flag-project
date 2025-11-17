@@ -326,7 +326,8 @@ body.dark-mode .flag-card {
     flex-direction: column;
     align-items: start;
     gap: 30px;
-    margin: 0px
+    margin: 0px;
+    padding: 0px;
   }
       .techover-logo {
       display: none;
@@ -339,6 +340,7 @@ body.dark-mode .flag-card {
   }
   .search-input {
     padding-right: 165px;
+    max-width: 335px;
   }
   .flag-all {
     padding: 15px 20px;
