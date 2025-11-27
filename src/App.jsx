@@ -1,6 +1,6 @@
 import "./App.css";
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -29,7 +29,7 @@ const routesFromElements = createRoutesFromElements(
 );
 
 
-const router = createBrowserRouter(routesFromElements);
+const router = createHashRouter(routesFromElements);
 
 function App() {
   return (
