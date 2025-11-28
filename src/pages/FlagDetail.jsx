@@ -81,12 +81,17 @@ const FlagDetail = () => {
             <strong>Border Countries:</strong>
             {country.borders
               ? country.borders.map((border) => (
-                  <p key={border} className="border-box">
+                  <Link 
+                    key={border}
+                    to={`/flagdetails/${border}`}
+                    className="border-box"
+                  >
                     {border}
-                  </p>
+                  </Link>
                 ))
               : " No border countries"}
           </div>
+
         </div>
       </div>
     </div>
